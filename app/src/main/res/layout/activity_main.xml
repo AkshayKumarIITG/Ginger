@@ -1,29 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sample.MainActivity">
+    tools:context=".MainActivity">
 
-    <com.prabhat1707.verticalpager.VerticalViewPager
-        android:id="@+id/viewPager"
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000000">
+        android:layout_height="match_parent">
 
-    </com.prabhat1707.verticalpager.VerticalViewPager>
+        <!-- Top Toolbar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout1">
 
-    <Button
-        android:id="@+id/btnOrder"
-        android:text="Like"
-        android:textColor="#fff"
-        android:background="@drawable/round"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="60dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <include layout="@layout/layout_top_tab"/>
 
-</RelativeLayout>
+        </RelativeLayout>
+
+        <!-- Middle Section -->
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/relLayout1">
+
+
+            <com.prabhat1707.verticalpager.VerticalViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000">
+
+            </com.prabhat1707.verticalpager.VerticalViewPager>
+
+        </RelativeLayout>
+
+        <!-- bottom Navigation -->
+
+        <!--        <include layout="@layout/layout_bottom_navigation_view"/>-->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn"
+            android:text="Like"
+            android:textColor="#fff"
+            android:background="@drawable/round"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

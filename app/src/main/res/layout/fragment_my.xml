@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background"
-    tools:context="com.example.sample.MyFragment">
+    android:background="@drawable/background">
 
 
     <RelativeLayout
@@ -15,7 +14,7 @@
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="550dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="0dp"
             android:scaleType="centerCrop"
             android:src="@drawable/brochure" />
 
