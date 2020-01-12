@@ -9,16 +9,38 @@
 
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#000000">
 
         <!-- Top Toolbar -->
         <RelativeLayout
+            android:id="@+id/relLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/relLayout1">
+            android:background="#000000">
 
-            <include layout="@layout/layout_top_tab"/>
+            <!--            <include layout="@layout/layout_top_tab"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/bangers"
+                    android:text="GINGER"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"/>
+
+
+
+            </LinearLayout>
 
         </RelativeLayout>
 
@@ -33,7 +55,7 @@
             <com.prabhat1707.verticalpager.VerticalViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="673dp"
                 android:background="#000000">
 
             </com.prabhat1707.verticalpager.VerticalViewPager>
@@ -42,23 +64,28 @@
 
         <!-- bottom Navigation -->
 
-        <!--        <include layout="@layout/layout_bottom_navigation_view"/>-->
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <com.aar.tapholdupbutton.TapHoldUpButton
             android:id="@+id/btn"
-            android:text="Like"
-            android:textColor="#fff"
-            android:background="@drawable/round"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:thub_ringStrokeWidth="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            app:thub_ringColor="#DDDDDD"
+            app:thub_circleColor="#DDDDDD"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="60dp"
-            android:layout_centerHorizontal="true"/>
+            app:thub_circleGap="3dp"
+            app:thub_circleColorOhHold="#FA1A1A"/>
+
+
+
+        <include layout="@layout/layout_bottom_navigation_view"/>
 
 
     </RelativeLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

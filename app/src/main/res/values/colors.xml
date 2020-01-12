@@ -10,4 +10,6 @@
     <color name="grey">#bfbfbf</color>
     <color name="white">#fff</color>
     <color name="black">#000</color>
+    <color name="orange">#ff8d00</color>
+
 </resources>

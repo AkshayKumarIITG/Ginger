@@ -7,14 +7,17 @@
         android:layout_alignParentBottom="true">
 
 
-        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/bottomNavViewBar"
-            android:background="@drawable/white_grey_border_top"
-            app:menu="@menu/bottom_navigation_menu">
+            android:background="@color/black"
+            app:menu="@menu/top_navigation_menu"
+            app:itemIconTint="@color/orange"
+            app:itemTextColor="@color/orange"
+            >
 
-        </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </RelativeLayout>
 
