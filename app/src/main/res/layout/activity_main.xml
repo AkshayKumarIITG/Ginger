@@ -71,13 +71,13 @@
             app:thub_ringStrokeWidth="2dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="60dp"
-            app:thub_ringColor="#DDDDDD"
+            android:layout_marginBottom="50dp"
+            app:thub_ringColor="@color/orange"
             app:thub_circleColor="#DDDDDD"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             app:thub_circleGap="3dp"
-            app:thub_circleColorOhHold="#FA1A1A"/>
+            app:thub_circleColorOhHold="@color/orange"/>
 
 
 
