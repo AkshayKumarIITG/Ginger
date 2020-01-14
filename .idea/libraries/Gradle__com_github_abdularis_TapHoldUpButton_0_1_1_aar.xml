@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.abdularis:TapHoldUpButton:0.1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce2e9c3f8702fa83e396012e5d48659c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ce2e9c3f8702fa83e396012e5d48659c/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.abdularis/TapHoldUpButton/0.1.1/dafd03c9acb3579d144a2c03bbb15df4845f7f9f/TapHoldUpButton-0.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
