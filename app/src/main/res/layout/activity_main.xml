@@ -64,20 +64,18 @@
 
         <!-- bottom Navigation -->
 
-        <com.aar.tapholdupbutton.TapHoldUpButton
-            android:id="@+id/btn"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            app:thub_ringStrokeWidth="2dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="50dp"
-            app:thub_ringColor="@color/orange"
-            app:thub_circleColor="#DDDDDD"
+        <Button
+            android:id="@+id/btnOrder"
+            android:text="Like"
+            android:textColor="#fff"
+            android:background="@drawable/round"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            app:thub_circleGap="3dp"
-            app:thub_circleColorOhHold="@color/orange"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
 
 

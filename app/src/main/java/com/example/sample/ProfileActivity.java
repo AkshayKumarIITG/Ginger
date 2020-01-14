@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -26,7 +27,7 @@ import java.util.UUID;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private Button btn_upload, btn_choose;
+    private Button btn_upload, btn_choose, btn_signout;
     private ImageView imageView;
     private Uri filePath;
     private FirebaseStorage storage ;
@@ -41,6 +42,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         btn_choose = (Button) findViewById(R.id.btn_choose);
         btn_upload = (Button) findViewById(R.id.btn_upload);
+        btn_signout = (Button) findViewById(R.id.btn_signOut);
         imageView = (ImageView) findViewById(R.id.image_profile);
 
         storage = FirebaseStorage.getInstance();
@@ -59,6 +61,16 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 uploadImage();
+            }
+        });
+
+
+        btn_signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(ProfileActivity.this, Login.class));
             }
         });
     }

@@ -6,29 +6,35 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class VerticalPagerAdapter extends PagerAdapter {
 
-    private List<Model> models;
-    private LayoutInflater mLayoutInflater;
-    private Context mContext;
+    private List<Movie> movieList;
+    private LayoutInflater inflater;
+    private Context context;
 
-    public VerticalPagerAdapter(List<Model> models, Context context) {
-        mContext = context;
-        this.models = models;
-        mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    public VerticalPagerAdapter(List<Movie> movieList, ValueEventListener valueEventListener){
+
+    }
+
+    public VerticalPagerAdapter(Context context, List<Movie> movieList) {
+        this.context = context;
+        this.movieList = movieList;
+        inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return models.size();
+        return movieList.size();
     }
 
     @Override
@@ -40,14 +46,17 @@ public class VerticalPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
-        View itemView = mLayoutInflater.inflate(R.layout.fragment_my, container, false);
+        View itemView = inflater.inflate(R.layout.fragment_my, container, false);
         TextView title1 = (TextView) itemView.findViewById(R.id.title);
         TextView desc1 = (TextView) itemView.findViewById(R.id.desc);
         ImageView imageView = (ImageView) itemView.findViewById(R.id.image);
 
-        imageView.setImageResource(models.get(position).getImage());
-        title1.setText(models.get(position).getTitle());
-        desc1.setText(models.get(position).getDesc());
+
+
+        Picasso.get().load(movieList.get(position).getImage()).into(imageView);
+        title1.setText(movieList.get(position).getName());
+        desc1.setText(movieList.get(position).getDescription());
+
 
         container.addView(itemView);
 
